@@ -51,4 +51,68 @@ public class CurrentObservationView {
         this.solarRadiation = currentObservation.getSolarradiation();
         this.UV = currentObservation.getUV();
     }
+
+    public CurrentObservation getCurrentObservation() {
+        return currentObservation;
+    }
+
+    public WU_Location getObservationLocation() {
+        return observationLocation;
+    }
+
+    public String getStationId() {
+        return stationId;
+    }
+
+    public ZonedDateTime getObservationTime() {
+        return observationTime;
+    }
+
+    public ZonedDateTime getLocalTime() {
+        return localTime;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public Temperature getTemperature() {
+        return temperature;
+    }
+
+    public String getRelativehumidity() {
+        return relativehumidity;
+    }
+
+    public String getWindString() {
+        return windString;
+    }
+
+    public String getWindDirection() {
+        return windDirection;
+    }
+
+    public Temperature getDewpoint() {
+        return dewpoint;
+    }
+
+    public Temperature getHeatIndex() {
+        return heatIndex;
+    }
+
+    public Temperature getWindChill() {
+        return windChill;
+    }
+
+    public Temperature getFeelsLike() {
+        return feelsLike;
+    }
+
+    public String getSolarRadiation() {
+        return solarRadiation;
+    }
+
+    public String getUV() {
+        return UV;
+    }
 }

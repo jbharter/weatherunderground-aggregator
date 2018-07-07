@@ -1,7 +1,10 @@
 package com.kortware.wu.apiclient;
 
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.kortware.wu.apiclient.view.CurrentObservationView;
 import com.kortware.wu.apiclient.wuresponse.PWSResponse;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -52,27 +55,6 @@ public class PWSAPIClient {
             return gson.fromJson(response.body().charStream(), PWSResponse.class);
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-
-        WUAPIClient client = new WUAPIClient() {
-            private String key = "<WU API Key Here>";
-            @Override
-            public String getAPIKey() {
-                return key;
-            }
-
-            @Override
-            public void setAPIKey(String APIKey) {
-                this.key = APIKey;
-            }
-        };
-
-        PWSAPIClient pwsapiClient = new PWSAPIClient(client, "<WU Station ID>");
-
-        PWSResponse response = pwsapiClient.getPWSResponse();
-
     }
 
 }
